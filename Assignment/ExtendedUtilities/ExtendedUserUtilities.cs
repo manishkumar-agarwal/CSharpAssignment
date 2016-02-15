@@ -76,5 +76,21 @@ namespace UserUtilities
             return distinctCharactersList;
         }
 
+        public static List<char> GenerateCharacterList(string userString,
+                                CharacterOperationType characterOperationType = CharacterOperationType.CaseSensitive)
+        {
+            List<char> charactersList;
+            if (characterOperationType == CharacterOperationType.CaseSensitive)
+            {
+                charactersList = userString.ToList();
+            }
+            else
+            {
+                charactersList = userString.ToUpper().ToList();
+            }
+
+            return charactersList;
+        }
+
     }
 }

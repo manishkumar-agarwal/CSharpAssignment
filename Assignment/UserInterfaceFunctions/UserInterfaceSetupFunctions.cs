@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UserInputFunctions;
 using UserUtilities;
 
@@ -37,6 +38,13 @@ namespace UserInterfaceFunctions
             }
 
             return userInputString;
+        }
+
+        internal static List<char> GetListOfCharacters(CharacterOperationType characterOperationType)
+        {
+            var userString = UserInterfaceSetupFunctions.GetUserInputString();
+
+            return ExtendedUserUtilities.GenerateCharacterList(userString, characterOperationType);
         }
 
         /// <summary>

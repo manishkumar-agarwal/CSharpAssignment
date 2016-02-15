@@ -29,9 +29,9 @@ namespace UserInterfaceFunctions
         /// </summary>
         public static void CountCharactersCaseSensitive()
         {
-            CountCharacters.characterOperationType = CharacterOperationType.CaseSensitive;
-            var userString = UserInterfaceSetupFunctions.GetUserInputString();
-            CountCharacters.CountCharacterInString(userString);
+            var listOfCharacters = UserInterfaceSetupFunctions.GetListOfCharacters(CharacterOperationType.CaseSensitive);
+            //CountCharactersUsingLINQ.CountCharactersInString(listOfCharacters);
+            CountCharactersUsingDictionary.CountCharactersInString(listOfCharacters);
         }
 
         /// <summary>
@@ -39,9 +39,9 @@ namespace UserInterfaceFunctions
         /// </summary>
         public static void CountCharactersCaseInSensitive()
         {
-            CountCharacters.characterOperationType = CharacterOperationType.CaseInsensitive;
-            var userString = UserInterfaceSetupFunctions.GetUserInputString();
-            CountCharacters.CountCharacterInString(userString);
+            var listOfCharacters = UserInterfaceSetupFunctions.GetListOfCharacters(CharacterOperationType.CaseInsensitive);
+            //CountCharactersUsingLINQ.CountCharactersInString(listOfCharacters);
+            CountCharactersUsingDictionary.CountCharactersInString(listOfCharacters);
         }
 
         /// <summary>

@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CountCharacters.cs" />
+    <Compile Include="CountCharactersUsingDictionary.cs" />
+    <Compile Include="CountCharactersUsingLINQ.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
