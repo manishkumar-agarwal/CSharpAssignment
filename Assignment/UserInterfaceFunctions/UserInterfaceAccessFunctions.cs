@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TriangleFunctions;
+﻿using TriangleFunctions;
 using CharacterFunctions;
 using UserUtilities;
 
@@ -35,7 +30,7 @@ namespace UserInterfaceFunctions
         public static void CountCharactersCaseSensitive()
         {
             CountCharacters.characterOperationType = CharacterOperationType.CaseSensitive;
-            string userString = UserInterfaceSetupFunctions.GetUserInputString();
+            var userString = UserInterfaceSetupFunctions.GetUserInputString();
             CountCharacters.CountCharacterInString(userString);
         }
 
@@ -45,7 +40,7 @@ namespace UserInterfaceFunctions
         public static void CountCharactersCaseInSensitive()
         {
             CountCharacters.characterOperationType = CharacterOperationType.CaseInsensitive;
-            string userString = UserInterfaceSetupFunctions.GetUserInputString();
+            var userString = UserInterfaceSetupFunctions.GetUserInputString();
             CountCharacters.CountCharacterInString(userString);
         }
 

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UserChoices;
 using UserInputFunctions;
 using UserInterfaceFunctions;
@@ -20,8 +16,8 @@ namespace UserFunctions
         /// <returns>Returns the Users Choice of Action </returns>
         public static UsersFunctionChoices GetUserActionChoice()
         {
-            UsersFunctionChoices usersFunctionChoice = PromptUsersChoice();
-            bool isValidUserFunctionChoice = ValidateUsersChoice(usersFunctionChoice);
+            var usersFunctionChoice = PromptUsersChoice();
+            var isValidUserFunctionChoice = ValidateUsersChoice(usersFunctionChoice);
 
             if (!isValidUserFunctionChoice)
             {
@@ -45,7 +41,7 @@ namespace UserFunctions
                 "\n5) Print *** Triagle" +
                 "\n6) End Application\n\nPlease enter your choice : ");
 
-            UsersFunctionChoices userChoice = UserInputGathering.GetUsersChoice();
+            var userChoice = UserInputGathering.GetUsersChoice();
             return userChoice;
         }
 
@@ -56,7 +52,7 @@ namespace UserFunctions
         /// <returns>Flag indicating the users choice is valid or not</returns>
         private static bool ValidateUsersChoice(UsersFunctionChoices userChoice)
         {
-            bool isValidUserChoiceFlag = UserInputValidation.IsValidUserChoice(userChoice);
+            var isValidUserChoiceFlag = UserInputValidation.IsValidUserChoice(userChoice);
             return isValidUserChoiceFlag;
         }
 

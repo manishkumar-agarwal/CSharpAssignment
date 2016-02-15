@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TriangleFunctions
 {
@@ -13,18 +9,14 @@ namespace TriangleFunctions
     {
         public static int HeightOfTriangle = 1;
        
-        /// <summary>
-        /// This method displays the star triangle for the user.
-        /// A Star(*) triangle is printed for user
-        /// </summary>
         public static void PrintStarTriangle()
         {
 
             Console.WriteLine("\n\n\n Below is the triangle with height of {0} lines\n", HeightOfTriangle);
 
-            int arraySize = 4 * HeightOfTriangle - 3;
-            char[] triangleArray = new char[arraySize];
-            int halfTriangleArrayLength = triangleArray.Length / 2;
+            var arraySize = 4 * HeightOfTriangle - 3;
+            var triangleArray = new char[arraySize];
+            var halfTriangleArrayLength = triangleArray.Length / 2;
             for (int i = 0; i <= halfTriangleArrayLength; i += 2)
             {
                 triangleArray[halfTriangleArrayLength] = '*';

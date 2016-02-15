@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UserUtilities
 {
@@ -21,10 +18,10 @@ namespace UserUtilities
         /// StartCharacter to endCharacter, both included</returns>
         public static char[] GenerateCharacterArray(char startCharacter, char endCharacter)
         {
-            int charArraySize = (endCharacter - startCharacter) + 1;
+            var charArraySize = (endCharacter - startCharacter) + 1;
 
-            char[] characterArray = new char[charArraySize];
-            int arrayIndex = 0;
+            var characterArray = new char[charArraySize];
+            var arrayIndex = 0;
             for (char character = startCharacter; character <= endCharacter; character++)
             {
                 characterArray[arrayIndex] = character;
@@ -43,7 +40,7 @@ namespace UserUtilities
         /// <returns></returns>
         public static char[] GenerateReverseCharacterArray(char[] charArray)
         {
-            char[] reverseCharacterArray = new char[charArray.Length - 1];
+            var reverseCharacterArray = new char[charArray.Length - 1];
 
             //The below loop prepares the reverse of the character array
             for (int i = 0, j = charArray.Length - 2;

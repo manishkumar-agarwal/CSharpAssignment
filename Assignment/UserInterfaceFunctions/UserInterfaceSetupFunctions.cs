@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UserInputFunctions;
 using UserUtilities;
 
@@ -16,7 +12,7 @@ namespace UserInterfaceFunctions
         /// </summary>
         internal static int SetHeightOfTriangle()
         {
-            int heightOfTriangle = UserInputGathering.GetIntergerInput("Please enter the height of star triangle");
+            var heightOfTriangle = UserInputGathering.GetIntergerInput("Please enter the height of star triangle");
 
             if (UserInputValidation.IsValidHeightofTriangle(heightOfTriangle) == false)
             {
@@ -33,7 +29,7 @@ namespace UserInterfaceFunctions
         /// <returns>Returns the String inputted by User</returns>
         internal static string GetUserInputString()
         {
-            string userInputString = UserInputGathering.GetStringInput();
+            var userInputString = UserInputGathering.GetStringInput();
             if (!UserInputValidation.IsValidString(userInputString))
             {
                 throw new InvalidOperationException(" ");
@@ -49,7 +45,7 @@ namespace UserInterfaceFunctions
         /// <returns>returns a character array from user inputted String</returns>
         internal static char[] SetCharacterArrayUsingString()
         {
-            string userInput = GetUserInputString();
+            var userInput = GetUserInputString();
 
             return userInput.ToCharArray();
         }
@@ -60,13 +56,13 @@ namespace UserInterfaceFunctions
     /// <returns>returns a character array from start character to end character</returns>
     internal static char[] SetCharacterArrayUsingStartEndCharacters()
         {
-            char startCharacter = GetCharacterInput("\nPlease enter an input start character : ");
+            var startCharacter = GetCharacterInput("\nPlease enter an input start character : ");
 
-            char endCharacter = GetCharacterInput("\nPlease enter an input end character : ");
+            var endCharacter = GetCharacterInput("\nPlease enter an input end character : ");
 
             UserInputValidation.ValidateStartAndEndCharacter(startCharacter, endCharacter);
 
-            char[] characterArray = ExtendedUserUtilities.GenerateCharacterArray(startCharacter, endCharacter);
+            var characterArray = ExtendedUserUtilities.GenerateCharacterArray(startCharacter, endCharacter);
 
             return characterArray;
 
@@ -79,7 +75,7 @@ namespace UserInterfaceFunctions
         /// <returns>character Input</returns>
         private static char GetCharacterInput(string descriptionString)
         {
-            char character = UserInputGathering.GetCharacterInput(descriptionString);
+            var character = UserInputGathering.GetCharacterInput(descriptionString);
             if (!UserInputValidation.IsValidLetter(character))
                 throw new InvalidOperationException(" ");
 

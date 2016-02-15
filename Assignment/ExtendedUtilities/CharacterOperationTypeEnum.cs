@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace UserUtilities
+﻿namespace UserUtilities
 {
     public enum CharacterOperationType { CaseSensitive = 1, CaseInsensitive };
 }

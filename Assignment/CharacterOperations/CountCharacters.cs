@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UserUtilities;
 
 namespace CharacterFunctions
@@ -55,7 +53,7 @@ namespace CharacterFunctions
         {
             foreach (var distinctCharacter in distinctCharactersList)
             {
-                int charCount = 0;
+                var charCount = 0;
 
                 foreach (var character in listOfCharacters)
                 {
@@ -81,19 +79,18 @@ namespace CharacterFunctions
         private static void RemoveProcessedCharactersFromList(List<char> listOfCharacters,
                                                                 char distinctCharacter, int charCount)
         {
-            bool removeOperationFlag = true;
+            var removeOperationFlag = true;
+
             for (int i = 0; i < charCount && removeOperationFlag != false; i++)
                 removeOperationFlag = listOfCharacters.Remove(distinctCharacter);
 
             if(characterOperationType == CharacterOperationType.CaseInsensitive)
             {
-
                 removeOperationFlag = true;
                 for (int i = 0; i < charCount && removeOperationFlag != false; i++)
                     listOfCharacters.Remove(Char.ToLower(distinctCharacter));
 
             }
-
             
         }
     }

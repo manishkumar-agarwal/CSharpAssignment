@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UserFunctions;
 using UserChoices;
 
@@ -13,15 +9,13 @@ namespace Assignment
     {
         static void Main(string[] args)
         {
+            var runApplicationFlag = true;
 
-
-            bool runApplicationFlag = true;
             do
             {
                 runApplicationFlag = PromptForUserOptions();
 
             } while (runApplicationFlag);
-            
 
         }
 
@@ -31,7 +25,8 @@ namespace Assignment
         /// <returns></returns>
         private static bool PromptForUserOptions()
         {
-            bool runApplicationFlag = true;
+            var runApplicationFlag = true;
+
             try
             {
                 UsersFunctionChoices userChoice = UserInteractionFunctions.GetUserActionChoice();

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UserUtilities;
 
 namespace TriangleFunctions
@@ -19,7 +15,7 @@ namespace TriangleFunctions
         /// </summary>
         public static void PrintTriangularOutput()
         {
-            char[] reverseCharacterArray = ExtendedUserUtilities.GenerateReverseCharacterArray(CharacterArray);
+            var reverseCharacterArray = ExtendedUserUtilities.GenerateReverseCharacterArray(CharacterArray);
             Console.WriteLine("\n Below is the Output Triangle\n");
             Console.Write(CharacterArray);
             Console.WriteLine(reverseCharacterArray);
